@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="titulo">Lista doce</h1>
+
+    <ul>
+      <li class="doce">brigadeiro</li>
+      <li class="doce">beijinho</li>
+      <li class="doce">bolo de cenoura</li>
+    </ul>
+
+    <script>
+      var titulo = document.getElementById("titulo");
+      var doces = document.getElementsByClassName("doce");
+
+      console.log(titulo);
+      console.log(doces);
+
+
+// lê ou altera todo o texto de dentro do elemento, igorando todo o css aplicado 
+      console.log(titulo.textContent);
+      titulo.textContent = "doces preferidos";
+      console.log(titulo.textContent);
+      
+
+
+//tbm mostra o texto interno, mas respeita o css aplicado
+      console.log(titulo.innerText);
+      titulo.innerText = "Doces Deliciosos";
+      console.log(titulo.innerText);
+
+    // retornar ou alterar o html interno do elemento
+    console.log(titulo.innerHTML)
+    titulo.innerHTML = "<em>Doces Preferidos</em>"    
+
+      const criandoTagP = document.createElement("p");
+      criandoTagP.innerText = "Quase chegando o NATAL!";
+      document.body.appendChild(criandoTagP);
+    </script>
+  </body>
+</html>

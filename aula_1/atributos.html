@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributo</title>
+</head>
+<body>
+    <h2 class="classe1" id="id1" style="color: yellow;">Teste 1</h2>
+    <p class="classe2" id="id2">Teste 2</p>
+    <p class="classe3" id="id3">Teste 3</p>
+    <div class="classe4" id="id4">Teste 4</div>
+    <p class="classe5" id="id5">Teste 5</p>
+
+    <script>
+        document.getElementById("id2").style.color = "red";
+        document.getElementById("id3").style.color = "blue";
+        document.getElementById("id4").style.color = "lightblue";
+
+        const arrayObjClasse3 = document.getElementsByClassName("classe3");
+        arrayObjClasse3[1].style.backgroundColor = "red";
+        
+        
+        const criandoTagP = document.createElement("p");
+        criandoTagP.innerText = "Quase chegando o NATAL!";
+        document.body.appendChild(criandoTagP)
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+<script>
+const descontoPar = function(valor) {
+    return valor * 0.90;
+};
+
+const descontoImpar = function(valor) {
+    return valor * 0.80;
+};
+
+var minuto = new Date().getMinutes();
+console.log("Minuto atual:", minuto);
+
+var preco = parseFloat(prompt("Digite o valor do produto:"));
+
+var calcular;
+
+if (minuto % 2 === 0) {
+    calcular = descontoPar;
+} else {
+    calcular = descontoImpar;
+}
+
+var resultado = calcular(preco);
+
+console.log("Valor final:", resultado);
+</script>
+
+</body>
+</html>

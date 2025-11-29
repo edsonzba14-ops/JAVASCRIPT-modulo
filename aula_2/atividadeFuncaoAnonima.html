@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tres primeiros nomes</title>
+  </head>
+  <body>
+    <script>
+      const turma = function () {
+        const nome1 = prompt("Digite um nome:");
+        const nome2 = prompt("Digite um nome:");
+        const nome3 = prompt("Digite um nome:");
+
+        const lista = [nome1, nome2, nome3];
+
+        lista.sort();
+        return lista;
+      };
+
+      console.log(turma);
+    </script>
+  </body>
+</html>

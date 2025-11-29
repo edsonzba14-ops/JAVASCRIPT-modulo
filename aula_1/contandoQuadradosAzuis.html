@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contando os quadrados azuis</title>
+  </head>
+  <body>
+    <div class="cor" style="color: blue">Azul</div>
+
+    <div class="cor" style="color: blue">Azul</div>
+
+    <div class="cor" style="color: red">Vermelho</div>
+
+    <div class="cor" style="color: green">Verde</div>
+
+    <div class="cor" style="color: blue">Azul</div>
+
+    <div class="cor" style="color: blue">Azul</div>
+
+    /////////////////////////////////////
+
+    <div class="azul" style="color: blue">Azul</div>
+    <div class="azul" style="color: blue">Azul</div>
+    <div class="vermelho" style="color: red">Vermelho</div>
+    <div class="verde" style="color: green">Verde</div>
+    <div class="azul" style="color: blue">Azul</div>
+    <div class="azul" style="color: blue">Azul</div>
+
+    <script>
+      function contarQuadradosAzuis1() {
+        const cores = document.getElementsByClassName("cor");
+
+        var quantidadeAzul = 0;
+
+        for (var i = 0; i < cores.length; i++) {
+          if (cores[i].style.color === "blue") {
+            quantidadeAzul++;
+          }
+        }
+      }
+
+      
+//////////////////////////////
+
+
+        function contarQuadradosAzuis2() {
+            const azuis = document.getElementsByClassName("azul");
+            return azuis.length;
+        }
+
+
+      console.log("Quantidade de quadrados azuis:", quantidadeAzul);
+    </script>
+  </body>
+</html>
