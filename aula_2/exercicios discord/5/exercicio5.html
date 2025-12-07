@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trocar imagem</title>
+
+    <style>
+
+        #minhaImagem {
+            width: 300px;
+            height: 300px;
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #353535;
+            border-color: #2e2e2e;
+        }
+    </style>
+</head>
+<body>
+
+    <img src="https://i.pinimg.com/736x/c1/7f/24/c17f24e50cb692f6b4d80b96fec0b8e4.jpg" alt="Imagem" id="minhaImagem">
+
+<button id="imagem1">
+    Imagem 1
+</button>
+
+<button id="imagem2" >
+    Imagem 2
+</button>
+
+
+
+    <script>
+
+        const botaoImagem1 = document.getElementById('imagem1');
+        const botaoImagem2 = document.getElementById('imagem2');
+        const minhaImagem = document.getElementById('minhaImagem');
+
+        botaoImagem1.addEventListener('click', function() {
+            minhaImagem.src = 'https://i.pinimg.com/736x/c1/7f/24/c17f24e50cb692f6b4d80b96fec0b8e4.jpg';
+        });
+
+        botaoImagem2.addEventListener('click', function() {
+            minhaImagem.src = 'https://i.pinimg.com/736x/8d/dd/9c/8ddd9c99eb2ea71dd8e5dfb2f0b03bfc.jpg';
+        });
+
+
+
+
+    </script>
+    
+</body>
+</html>

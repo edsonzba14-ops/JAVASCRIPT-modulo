@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Idade calculada</title>
+
+    <style>
+      #resultadoIdade {
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 20px;
+      }
+
+      h1 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        size: 24px;
+      }
+      body {
+        margin: 20px;
+        background-color: #f0f0f0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Calcule a sua Idade! Basta escrever o ano em que nasceu no imput abaixo:
+    </h1>
+
+    <input type="number" id="anoNascimento" placeholder="Ano de Nascimento" />
+    <button id="calcularIdade">Calcular Idade</button>
+    <p id="resultadoIdade"></p>
+    <script>
+      document.getElementById("calcularIdade").onclick = function () {
+        var anoNascimento = parseInt(
+          document.getElementById("anoNascimento").value
+        );
+        var anoAtual = new Date().getFullYear();
+        var idade = anoAtual - anoNascimento;
+        document.getElementById("resultadoIdade").innerText =
+          "Sua idade é: " + idade + " anos.";
+      };
+    </script>
+  </body>
+</html>

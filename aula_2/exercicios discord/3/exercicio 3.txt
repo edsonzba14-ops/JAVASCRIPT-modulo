@@ -1,0 +1,21 @@
+**3. Mudar a cor de um texto**
+
+
+
+Crie uma <p> e três botões:
+
+
+
+Vermelho
+
+
+
+Azul
+
+
+
+Verde
+
+
+
+Ao clicar em cada botão, troque a cor do texto usando style.color.

@@ -1,70 +1,43 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tabela</title>
+    <title>Lista</title>
     <style>
-      table {
-        width: 300px;
-        border-collapse: collapse;
-        margin-top: 20px;
-      }
-      th,
-      td {
-        border: 1px solid #000;
+      li {
         padding: 5px;
-        text-align: center;
+        margin: 3px;
       }
-      .vermelho {
-        background: #ffb3b3;
+      .impar {
+        background: #ba85ff;
       }
-      .verde {
-        background: #b6ffb3;
+      .par {
+        background: #3d5aff;
       }
     </style>
   </head>
   <body>
-    <h2>Tabela de Alunos</h2>
-    <div id="tabela"></div>
+    <ol id="lista"></ol>
 
     <script>
-      const alunos = [
-        { nome: "Ana", nota1: 8, nota2: 7 },
-        { nome: "Bruno", nota1: 4, nota2: 5 },
-        { nome: "Carla", nota1: 6, nota2: 6 },
-        { nome: "Diego", nota1: 9, nota2: 10 },
-      ];
+      var valores = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      var lista = document.getElementById("lista");
 
-      const tabela = document.createElement("table");
-      tabela.innerHTML =
-        "\n <tr>\n <th>Nome<\/th>\n <th>N1<\/th>\n <th>N2<\/th>\n <th>Média<\/th>\n <\/tr>\n ";
+      for (var i = 0; i < valores.length; i++) {
+        var li = document.createElement("li");
+        var texto = document.createTextNode("Item " + valores[i]);
+        li.appendChild(texto);
 
-      alunos.forEach((a) => {
-        const media = (a.nota1 + a.nota2) / 2;
-        const tr = document.createElement("tr");
+        var posicao = i + 1;
+        if (posicao % 2 === 0) {
+          li.className = "par";
+        } else {
+          li.className = "impar";
+        }
 
-        if (media < 6) tr.classList.add("vermelho");
-        else tr.classList.add("verde");
-
-        tr.innerHTML =
-          "\n <td>" +
-          a.nome +
-          "<\/td>" +
-          "<td>" +
-          a.nota1 +
-          "<\/td>" +
-          "<td>" +
-          a.nota2 +
-          "<\/td>" +
-          "<td>" +
-          media.toFixed(1) +
-          "<\/td>";
-
-        tabela.appendChild(tr);
-      });
-
-      document.getElementById("tabela").appendChild(tabela);
+        lista.appendChild(li);
+      }
     </script>
   </body>
 </html>

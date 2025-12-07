@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contador</title>
+  </head>
+  <body>
+    <h1>contador simples</h1>
+
+    <p id="valor">0</p>
+
+    <button id="mais">+1</button>
+    <button id="menos">-1</button>
+
+    <script>
+      var contador = 0;
+
+      document.getElementById("mais").onclick = function () {
+        contador = contador + 1;
+        document.getElementById("valor").textContent = contador;
+      };
+
+      document.getElementById("menos").onclick = function () {
+        contador = contador - 1;
+        document.getElementById("valor").textContent = contador;
+      };
+    </script>
+  </body>
+</html>

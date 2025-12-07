@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mudar cor</title>
+  </head>
+  <body>
+    <h1>Aperte nos botões para mudar a cor do texto abaixo:</h1>
+    <p id="mudarCor">eu gosto de abacaxi</p>
+    <button id="vermelho">VERMELHO</button>
+    <button id="azul">AZUL</button>
+    <button id="verde">VERDE</button>
+
+    <script>
+
+      document.getElementById("vermelho").onclick = function () {
+        document.getElementById("mudarCor").style.color = "red";
+      }  
+      document.getElementById("azul").onclick = function () {
+        document.getElementById("mudarCor").style.color = "blue";
+      }  
+      document.getElementById("verde").onclick = function () {
+        document.getElementById("mudarCor").style.color = "green";
+      }  
+
+
+
+    </script>
+  </body>
+</html>

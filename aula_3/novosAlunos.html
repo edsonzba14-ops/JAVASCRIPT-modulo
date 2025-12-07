@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de Alunos</title>
+  </head>
+
+  <body>
+    <h2>Cadastro de novos alunos</h2>
+
+    <input id="campoNome" type="text" placeholder="Nome do aluno" />
+    <button id="btnCadastrar">Cadastrar</button>
+
+    <ol id="listaAlunos"></ol>
+
+    <script>
+      const input = document.getElementById("campoNome");
+      const btn = document.getElementById("btnCadastrar");
+      const lista = document.getElementById("listaAlunos");
+
+      btn.addEventListener("click", () => {
+        const nome = input.value.trim;
+
+        if (nome === "") return;
+
+        const li = document.createElement("li");
+        li.textContent = nome.toUpperCase();
+
+        lista.appendChild(li);
+
+        input.value = "";
+        input.focus();
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+**6. Criar itens de lista**
+
+
+
+Crie um input e um botão.
+
+Ao digitar um texto e clicar no botão, adicione um novo <li> dentro de uma <ul> usando document.createElement().

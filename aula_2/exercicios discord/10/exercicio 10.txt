@@ -1,0 +1,26 @@
+**10. Calculadora simples**
+
+
+
+Crie dois inputs e botões:
+
+
+
+Somar
+
+
+
+Subtrair
+
+
+
+Multiplicar
+
+
+
+Dividir
+
+
+
+Mostre o resultado em um <p> usando innerText.
+

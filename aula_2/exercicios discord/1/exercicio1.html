@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input e Botão</title>
+  </head>
+  <body>
+    <h1>digite algo e clique no botão:</h1>
+
+    <input id="escreva" type="text" placeholder="Digite aqui" />
+    <button id="botao">Mostrar</button>
+
+    <p id="escrito"></p>
+
+    <script>
+      document.getElementById("botao").onclick = function () {
+        const nome = document.getElementById("escreva").value;
+        document.getElementById("escrito").textContent = nome;
+      };
+    </script>
+  </body>
+</html>

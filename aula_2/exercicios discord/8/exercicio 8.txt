@@ -1,0 +1,15 @@
+**8. Verificar palíndromo**
+
+
+
+Crie um input.
+
+Ao clicar no botão:
+
+
+
+verifique se a palavra é palíndromo
+
+
+
+mostre o resultado no HTML

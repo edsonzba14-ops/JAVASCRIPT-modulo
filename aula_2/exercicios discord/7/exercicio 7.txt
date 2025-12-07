@@ -1,0 +1,6 @@
+**7. Remover item de lista**
+
+
+
+Usando o exercício anterior, coloque um botão “remover último item” que apaga o último <li> da lista usando .remove().
+

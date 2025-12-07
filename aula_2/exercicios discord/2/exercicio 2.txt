@@ -1,0 +1,19 @@
+**2. Contador simples**
+
+
+
+Mostre um número que começa em 0.
+
+Crie dois botões:
+
+
+
+“+1”
+
+
+
+“-1”
+
+
+
+Ao clicar nos botões, o valor exibido deve atualizar.

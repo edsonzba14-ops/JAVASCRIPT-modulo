@@ -1,0 +1,7 @@
+**9. Contar caracteres digitados**
+
+
+
+Crie um input de texto.
+
+Conforme o usuário digita (utilize oninput), mostre quantos caracteres a palavra tem.

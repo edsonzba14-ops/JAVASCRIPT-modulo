@@ -1,0 +1,7 @@
+**1. Mostrar nome na tela**
+
+
+
+Crie um input e um botão.
+
+Quando clicar no botão, o nome digitado deve aparecer em um <p> na página usando document.getElementById().

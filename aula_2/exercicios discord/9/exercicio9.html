@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mostrar caracteres digitados</title>
+
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+      }
+
+      input {
+        padding: 8px;
+        font-size: 16px;
+        margin-right: 8px;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Digite e saiba quantos caracteres foram digitados:</h1>
+
+    <input
+      type="text"
+      id="palavraInput"
+      placeholder="Digite uma palavra"
+      oninput= mostrarCaracteres()
+    />
+    <p id="caracteres"></p>
+
+    <script>
+      function mostrarCaracteres() {
+        const palavraInput = document.getElementById("palavraInput");
+        const palavra = palavraInput.value;
+        const resultado = document.getElementById("caracteres");
+
+        resultado.textContent = `Número de caracteres digitados: ${palavra.length}`;
+      }
+    </script>
+  </body>
+</html>

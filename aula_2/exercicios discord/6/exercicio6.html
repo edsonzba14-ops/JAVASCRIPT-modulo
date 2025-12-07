@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Criar itens de lista</title>
+
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+      }
+
+      #container {
+        margin-top: 20px;
+      }
+
+      #novoItem {
+        padding: 8px;
+        font-size: 16px;
+      }
+
+      #addItem {
+        padding: 8px 12px;
+        font-size: 16px;
+        margin-left: 8px;
+        cursor: pointer;
+      }
+
+      #lista {
+        list-style-type: disc;
+        margin-top: 20px;
+        padding-right: 250px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <input type="text" id="novoItem" placeholder="Digite o novo item" />
+
+      <button id="addItem">Adicionar Item</button>
+    </div>
+
+    <ul id="lista"></ul>
+
+    <script>
+      const botaoAdicionar = document.getElementById("addItem");
+      const lista = document.getElementById("lista");
+      const inputNovoItem = document.getElementById("novoItem");
+
+      botaoAdicionar.addEventListener("click", function () {
+        const textoItem = inputNovoItem.value;
+
+        if (textoItem.trim() !== "") {
+          const novoItemLista = document.createElement("li");
+          novoItemLista.textContent = textoItem;
+          lista.appendChild(novoItemLista);
+          inputNovoItem.value = "";
+        }
+      });
+    </script>
+
+  </body>
+</html>

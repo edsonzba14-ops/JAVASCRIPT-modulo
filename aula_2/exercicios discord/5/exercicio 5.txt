@@ -1,0 +1,19 @@
+**5. Trocar a imagem**
+
+
+
+Coloque uma imagem na tela.
+
+Crie dois botões:
+
+
+
+“Imagem 1”
+
+
+
+“Imagem 2”
+
+
+
+Quando clicar, troque o src da imagem pelo caminho correspondente.
