@@ -1,9 +1,9 @@
 const transporte = () => {
-    const listaTransporte = ["🚗", "🚙", "🚘", "🚕", "🚓"];
+  const listaTransporte = ["🚗", "🚙", "🚘", "🚕", "🚓"];
 
-    for ( const transporte of listaTransporte) {
-        console.log(transporte);
-    }
+  for (const transporte of listaTransporte) {
+    console.log(transporte);
+  }
 };
 
 transporte();

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Filmes</title>
+  </head>
+  <body>
+    <h2>Lista de Filmes</h2>
+
+    <input type="text" id="filmeInput" placeholder="Nome do filme" />
+    <button id="btnAdicionar">Adicionar filme</button>
+
+    <br /><br />
+
+    <input type="text" id="buscaInput" placeholder="Buscar filme" />
+
+    <br /><br />
+
+    <button id="btnAZ">Ordenar A-Z</button>
+    <button id="btnZA">Ordenar Z-A</button>
+
+    <br /><br />
+
+    <ol id="lista"></ol>
+
+    <script>
+      const filmeInput = document.getElementById("filmeInput");
+      const buscaInput = document.getElementById("buscaInput");
+      const btnAdicionar = document.getElementById("btnAdicionar");
+      const btnAZ = document.getElementById("btnAZ");
+      const btnZA = document.getElementById("btnZA");
+      const lista = document.getElementById("lista");
+
+      let filmes = [];
+      let ordem = "AZ";
+
+      btnAdicionar.addEventListener("click", adicionarFilme);
+      btnAZ.addEventListener("click", () => ordenar("AZ"));
+      btnZA.addEventListener("click", () => ordenar("ZA"));
+      buscaInput.addEventListener("input", atualizarLista);
+
+      function adicionarFilme() {
+        const nome = filmeInput.value.trim();
+
+        if (nome === "") return;
+
+        filmes.push(nome.toUpperCase());
+
+        filmeInput.value = "";
+        filmeInput.focus();
+
+        atualizarLista();
+      }
+
+      function ordenar(tipo) {
+        ordem = tipo;
+
+        if (tipo === "AZ") {
+          filmes.sort((a, b) => a.localeCompare(b));
+        } else {
+          filmes.sort((a, b) => b.localeCompare(a));
+        }
+
+        atualizarLista();
+      }
+
+      function atualizarLista() {
+        lista.innerHTML = "";
+
+        const termo = buscaInput.value().toLowerCase();
+
+        const filmesFiltrados = filmes.filter((filme) =>
+          filme.toLowerCase().includes(termo)
+        );
+
+        filmesFiltrados.forEach((filme) => {
+          const li = document.createElement("li");
+          li.textContent = filme;
+          lista.appendChild(li);
+        });
+      }
+    </script>
+  </body>
+</html>

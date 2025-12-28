@@ -8,4 +8,4 @@ console.log(" 3- esse é o terceiro log e o terceiro da ordem de execução");
 
 // exemplo de função assíncrona com setTimeout
 
-//allwait
+//await

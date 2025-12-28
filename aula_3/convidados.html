@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Convidados</title>
+  </head>
+  <body>
+    <h2>Total de convidados: <span id="total">0</span></h2>
+
+    <input type="text" id="nomeInput" placeholder="Digite o nome" />
+    <button id="btnAdicionar">Adicionar</button>
+
+    <ol id="lista"></ol>
+
+    <script>
+      const input = document.getElementById("nomeInput");
+      const botao = document.getElementById("btnAdicionar");
+      const lista = document.getElementById("lista");
+      const totalSpan = document.getElementById("total");
+
+      let convidados = [];
+
+      botao.addEventListener("click", adicionar);
+
+      function adicionar() {
+        const nome = input.value.trim();
+
+        if (nome === "") return;
+
+        convidados.push(nome);
+
+        convidados.sort((a, b) => a.localeCompare(b));
+
+        atualizarLista();
+
+        input.value = "";
+        input.focus();
+      }
+
+      function atualizarLista() {
+        lista.innerHTML = "";
+
+        convidados.forEach((nome) => {
+          const li = document.createElement("li");
+          li.textContent = nome;
+          lista.appendChild(li);
+        });
+
+        totalSpan.textContent = convidados.length;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Produto Eletrônico</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 30px;
+      }
+
+      #produto {
+        line-height: 1.6;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Informações do Produto</h1>
+
+    <div id="produto"></div>
+
+    <script>
+      const precoOriginal = Number(
+        prompt("Digite o preço original do produto:")
+      );
+      const desconto = Number(prompt("Digite o valor do desconto:"));
+
+      const produto = {
+        nome: "Fone Bluetooth",
+        precoOriginal: precoOriginal,
+        desconto: desconto,
+
+        get precoFinal() {
+          return this.precoOriginal - this.desconto;
+        },
+      };
+
+      const status = produto.desconto > 0 ? "Em promoção" : "Preço normal";
+
+      const textoProduto = `
+            <strong>Nome do produto:</strong> ${produto.nome}<br>
+            <strong>Preço original:</strong> R$ ${produto.precoOriginal.toFixed(
+              2
+            )}<br>
+            <strong>Desconto:</strong> R$ ${produto.desconto.toFixed(2)}<br>
+            <strong>Preço com desconto:</strong> R$ ${produto.precoFinal.toFixed(
+              2
+            )}<br>
+            <strong>Status:</strong> ${status}
+        `;
+
+      document.getElementById("produto").innerHTML = textoProduto;
+    </script>
+  </body>
+</html>

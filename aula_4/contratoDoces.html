@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contrato de Serviços</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 30px;
+      }
+
+      #contrato {
+        text-align: justify;
+        line-height: 1.6;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Contrato de Prestação de Serviços</h1>
+
+    <p id="contrato"></p>
+
+    <script>
+      const nome = prompt("Digite o nome da pessoa contratante:");
+      const cpf = prompt("Digite o CPF:");
+      const idade = prompt("Digite a idade:");
+
+      const descricao = prompt("Digite a descrição do serviço:");
+      const valor = prompt("Digite o valor do serviço:");
+      const duracao = prompt("Digite a duração do serviço:");
+
+      const pessoa = {
+        nome: nome,
+        cpf: cpf,
+        idade: idade,
+      };
+
+      const servico = {
+        descricao: descricao,
+        valor: valor,
+        duracao: duracao,
+      };
+
+      alert(
+        "Contrato criado com sucesso!\n\n" +
+          "Cliente: " +
+          pessoa.nome +
+          "\n" +
+          "Serviço: " +
+          servico.descricao
+      );
+
+      const contratoTexto = `
+            Pelo presente contrato, a pessoa ${pessoa.nome}, portadora do CPF ${pessoa.cpf},
+            com idade de ${pessoa.idade} anos, contrata o serviço de ${servico.descricao}.
+            O valor total do serviço será de R$ ${servico.valor}, com duração prevista de
+            ${servico.duracao}. Ambas as partes concordam com os termos estabelecidos neste contrato.
+        `;
+
+      document.getElementById("contrato").innerText = contratoTexto;
+    </script>
+  </body>
+</html>

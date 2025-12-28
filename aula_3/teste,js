@@ -1,8 +1,8 @@
 const transporte = () => {
   const listaTransporte = ["🚗", "🚙", "🚘", "🚕", "🚓"];
 
-  listaTransporte.forEach((valor) => {
-    console.log(valor);
+  listaTransporte.forEach((item) => {
+    console.log(item === "🚓" || item === "🚗");
   });
 };
 

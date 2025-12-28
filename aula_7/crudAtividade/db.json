@@ -1,0 +1,22 @@
+{
+  "carros": [
+    {
+      "id": 1,
+      "montadora": "Toyota",
+      "modelo": "Corolla",
+      "ano": 2020
+    },
+    {
+      "id": 2,
+      "montadora": "Honda",
+      "modelo": "Civic",
+      "ano": 2019
+    },
+    {
+      "id": 3,
+      "montadora": "Chevrolet",
+      "modelo": "Onix",
+      "ano": 2022
+    }
+  ]
+}

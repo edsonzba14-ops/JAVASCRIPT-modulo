@@ -1,0 +1,44 @@
+<!-- A loja de doces quer que os doces de leite sejam vendidos com desconto por 4 minutos. Um mostrador regressivo na tela irá mostrar ao cliente quanto tempo ele tem para aproveitar a oferta.
+
+O temporizador irá parar em zero
+
+Um texto “oferta encerrada” aparecerá na tela. -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Doces</title>
+</head>
+<body>
+
+    <h1>Oferta de Doces de Leite!</h1>
+    <h2 id="contador">04:00</h2>
+    <h2 id="mensagem" style="display:none;">Oferta encerrada</h2>
+
+    <script>
+        let tempoRestante = 240;
+        const contadorElemento = document.getElementById('contador');
+        const mensagemElemento = document.getElementById('mensagem');
+
+        const atualizarContador = () => {
+            const minutos = Math.floor(tempoRestante / 60);
+            const segundos = tempoRestante % 60;
+            contadorElemento.textContent = `${String(minutos).padStart(2, '0')}:${String(segundos).padStart(2, '0')}`;
+
+            if (tempoRestante > 0) {
+                tempoRestante--;
+            } else {
+                clearInterval(intervalo);
+                contadorElemento.style.display = 'none';
+                mensagemElemento.style.display = 'block';
+            }
+        };
+
+        const intervalo = setInterval(atualizarContador, 1000);
+        atualizarContador();
+    </script>
+    
+</body>
+</html>
