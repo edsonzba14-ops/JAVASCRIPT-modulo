@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Primeiro e último nome</title>
+  </head>
+  <body></body>
+
+  <script>
+    const nomeCompleto = prompt("Digite seu nome completo:");
+
+    const partesDoNome = nomeCompleto.split(" ");
+
+    function primeiroEUltimoNome(...nomes) {
+      const primeiroNome = nomes[0];
+      const ultimoSobrenome = nomes[nomes.length -1];
+
+      alert(`${primeiroNome} ${ultimoSobrenome}`);
+      console.log(`${primeiroNome} ${ultimoSobrenome}`);
+    }
+
+    primeiroEUltimoNome(...partesDoNome);
+  </script>
+</html>

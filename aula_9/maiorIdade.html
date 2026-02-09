@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maior Idade</title>
+  </head>
+  <body></body>
+
+  <script>
+    const idades = [18, 18, 19, 24, 27, 19, 16, 22, 34];
+
+    const maiorIdade = Math.max(...idades);
+
+    console.log("A maior idade da turma é:", maiorIdade);
+
+    function maiorIdade(...idades) {
+      return Math.max(...idades);
+    }
+
+    const idadesTurma = [18, 18, 19, 24, 27, 19, 16, 22, 34];
+
+    const resultado = maiorIdade(...idadesTurma);
+
+    console.log(`a maior idade da turma é: ${resultado}`);
+  </script>
+</html>

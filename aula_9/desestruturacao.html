@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desestruturação</title>
+  </head>
+  <body>
+    <script>
+      const frutas = ["🍑", "🍍", "🍋", "🍌"];
+
+      const [pessego, abacaxi, ...resto] = frutas;
+
+      console.log(frutas);
+      console.log(pessego);
+      console.log(abacaxi);
+      console.log(resto);
+
+      const [, , limao] = frutas;
+      console.log(limao);
+    </script>
+  </body>
+</html>

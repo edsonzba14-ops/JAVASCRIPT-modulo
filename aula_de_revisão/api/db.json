@@ -1,0 +1,32 @@
+{
+  "pokemons": [
+    {
+      "id": "25",
+      "nome": "Pikachu",
+      "tipo": "Elétrico",
+      "nivel": "5",
+      "regiao": "Kanto"
+    },
+    {
+      "id": "133",
+      "nome": "Eevee",
+      "tipo": "Normal",
+      "nivel": "5",
+      "regiao": "Kanto"
+    },
+    {
+      "id": "",
+      "nome": "",
+      "tipo": "",
+      "nivel": "",
+      "regiao": ""
+    },
+    {
+      "id": "7",
+      "nome": "Ivysaur",
+      "tipo": "Planta/Venenoso",
+      "nivel": "16",
+      "regiao": "Kanto"
+    }
+  ]
+}

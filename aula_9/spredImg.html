@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spred Img</title>
+  </head>
+  <body>
+    <img src="" alt="" />
+  </body>
+
+  <script>
+    const imagem = {
+      src: "https://preview.redd.it/how-legoshi-is-so-slim-but-so-strong-v0-i6c7u2dvjhxc1.png?auto=webp&s=624f7efe59cd500de702bbeb6326cd23e8c057b1",
+      alt: "Legoshi Beastars",
+    };
+
+    const imgElemento = document.createElement("img");
+
+    Object.assign(imgElemento, imagem);
+
+    document.body.appendChild(imgElemento);
+  </script>
+</html>
