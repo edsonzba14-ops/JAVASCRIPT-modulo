@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto com Spread</title>
+</head>
+<body>
+
+    <h1>Testando Spread em Objeto</h1>
+
+    <script>
+        const usuario = {
+            nome: "Edson",
+            idade: 18
+        };
+
+        const usuarioComEmail = {
+            ...usuario,
+            email: "edson@email.com"
+        };
+
+        console.log("Usuário original:", usuario);
+        console.log("Usuário com email:", usuarioComEmail);
+    </script>
+
+</body>
+</html>
